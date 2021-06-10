@@ -6,7 +6,7 @@ group project
 ​
 **Triangle**: 
 ​
-**Circle**: Hsinyu
+**Circle**: 
 ​
 **X**: 
 ​
