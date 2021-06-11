@@ -24,6 +24,30 @@ U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder
 
 
 ## Questions we hope to answer with this data
-1. Are other states experiencing an increase in fire frequency compared to past years?
+2. How does population growth, weather, and terrain affect wildfire occuring in an area in US?
 
+1. Predict the probability of a fire event happening in a certain area:
+Random forest or decision trees (supervised learning)
+Compare both models. Pick one with the better accuracy.
+
+
+Measuring pop, weather, terrain
+
+Machine learning:
+Features: 
+Humidity
+Precipitation 
+Wind
+Lat/long
+Population density per county (24 years)
+Terrain 
+
+What to do: 
+3 and 1
+
+Dependent variables:
+Will there be increase of fire?
+Will it be devastating?
+
+Using Tablau to present 
 
