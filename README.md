@@ -21,6 +21,14 @@ This dataset is a sub-sample from [1.88 Million US Fires]( https://www.kaggle.co
 ### Source
 U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
 
-## Questions we hope to answer with this data
+## Question we hope to answer with this data
 1. Are other states experiencing an increase in fire frequency compared to past years?
+
+## Machine Learning Model Brainstorm:
+- Supervised learning: Random Forest or Decision Trees (compare both models for best fit)
+- Model Features:
+  - Weather (Humidity, Precipitation, Wind, Temperature)
+  - Lat/Long
+  - Population density per county 
+  - Type of fire
 
