@@ -9,6 +9,9 @@
 
 **X**: Jen
 
+### Communication protocols
+We are using Slack, Google meet, and office hours.
+
 ## Selected topic
 We will be observing wildfires across the United States to see which parts of the United States has the highest frequency of fires. 
 
