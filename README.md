@@ -7,4 +7,11 @@ Our bias is that CA has the most devasting, most costly, most frequent wild fire
 We will utilize the last 24 years of data to predict the next 5 years. 
 
 Team communication via: 
-slack, google meets, and office hour breakout rooms. 
+slack, google meet, and office hour breakout rooms. 
+
+
+Reason we selected this topic:
+
+The members of our team were all California residents in the bay area. We all experienced ashes raining from the sky, 
+not being able to see the sun for days, and this topic touches us personally and peaks our interest to see if it's 
+possible to predict future fires based on past fire data. 
