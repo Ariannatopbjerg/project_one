@@ -9,14 +9,14 @@
 
 **X**: Jen
 
-### Communication protocols
-We are using Slack, Google meet, and office hours.
+### Team Communication via:
+Slack, Google Meet, and office hour breakout rooms.
 
 ## Selected topic
-We will be observing wildfires across the United States to see which parts of the United States has the highest frequency of fires. 
+Wildfires across the United States between 1990 and 2015. 
 
 ## Reason why we selected this topic
-Since wildfires are increasing in California compared to past years, we would like to see if other states/counties in this country are experiencing the same. 
+The members of our team were all California residents in the bay area. We all experienced ashes raining from the sky, not being able to see the sun for days, and this topic touches us personally and peaks our interest to see if it's possible to predict future fires based on past fire data.
 
 ## Description of source of data
 This dataset is a sub-sample from [1.88 Million US Fires]( https://www.kaggle.com/rtatman/188-million-us-wildfires) combined with historical weather and vegetation data from the website Kaggle. 
@@ -25,7 +25,7 @@ This dataset is a sub-sample from [1.88 Million US Fires]( https://www.kaggle.co
 U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
 
 ## Question we hope to answer with this data
-1. Are other states experiencing an increase in fire frequency compared to past years?
+Our project consists of analyzing fire data to determine at what accuracy if any, can we predict the next devastating fire. We will clean the input data set to ultimately demonstrate that we can have any desired results, and that the data can be biased to begin with. Our bias is that CA has the most devasting, most costly, most frequent wild fires than any other state over the last 5 years. We will utilize the last 24 years of data to predict the next 5 years.
 
 ## Machine Learning Model Brainstorm:
 - Supervised learning: Random Forest or Decision Trees (compare both models for best fit)
