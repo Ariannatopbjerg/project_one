@@ -42,3 +42,11 @@ https://github.com/cmawer/pycon-2017-eda-tutorial
 
 Found this one as well - it has multiple links.
 https://inciweb.nwcg.gov/links/
+
+## Machine Learning Model Brainstorm:
+Supervised learning: Random Forest or Decision Trees (compare both models for best fit)
+Model Features:
+Weather (Humidity, Precipitation, Wind, Temperature)
+Lat/Long
+Population density per county
+Type of fire
