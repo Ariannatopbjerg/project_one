@@ -9,8 +9,8 @@
 
 **X**: Jen
 
-### Team communication via:
-Slack, Google Meet, and office hour breakout rooms.
+### Team communication Protocol:
+We will be communicating via Slack, Google Meet, TA meeting hours, and class breakout rooms.
 
 ## Selected topic
 Wildfires across the United States. 
@@ -28,5 +28,13 @@ U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder
 ## Question we hope to answer with this data
 Our project consists of analyzing fire data to determine at what accuracy if any, can we predict the next devastating fire. We will clean the input dataset to ultimately demonstrate that we can have any desired results, and that the data can be biased to begin with. Our bias is that California has the most devasting and most frequent wildfires than any other state over the last 5 years. We will utilize the last 24 years of data to predict the next 5 years.
 
+## Project TimeLine
 
+## Technologies 
+**Database:** PostgreSQL 11 - pgAdmin 4
 
+**Code:** Jupyter Notebook (Python)
+
+**Machine Learning Model:** RandomForest Model
+
+**Presentation:** Tableau/Dashboard
