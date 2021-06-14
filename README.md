@@ -29,7 +29,7 @@ U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder
 Our project consists of analyzing fire data to determine at what accuracy if any, can we predict the next devastating fire. We will clean the input dataset to ultimately demonstrate that we can have any desired results, and that the data can be biased to begin with. Our bias is that California has the most devasting and most frequent wildfires than any other state over the last 5 years. We will utilize the last 24 years of data to predict the next 5 years.
 
 ## Project TimeLine
-- Looking over dataset's profile (pandas_profiling)
+- Looking over dataset's profile (pandas profiling)
 - Cleaning Data: removing unnecessary columns and renaming columns
 - Database: upload preliminary data to pgAdmin
 - Machine Learning Model: determine which model to use; either Random Forest Model or Decision Tree Model

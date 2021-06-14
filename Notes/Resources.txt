@@ -1,0 +1,8 @@
+Size classes: https://www.nwcg.gov/term/glossary/size-class-of-fire
+
+Machine learning model: Supervised
+*Classification? or regression
+Features(variables used to make a prediction):
+Target(Predicted outcome):
+Y(dependent) var
+X(independent) vars
