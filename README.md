@@ -33,6 +33,8 @@ Our project consists of analyzing fire data to determine at what accuracy if any
 - Cleaning Data: removing unnecessary columns and renaming columns
 - Database: upload preliminary data to pgAdmin
 - Machine Learning Model: determine which model to use; either Random Forest Model or Decision Tree Model
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ML_RandomForest_Model.PNG)
+As of right now, we are using the Random Forest model to see how accurate it is with the cleaned [subset data]()
 - Create interactive HTML website or Tableau storyboard 
 
 ## Technologies 
