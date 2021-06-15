@@ -42,3 +42,7 @@ https://github.com/cmawer/pycon-2017-eda-tutorial
 
 Found this one as well - it has multiple links.
 https://inciweb.nwcg.gov/links/
+
+
+One model looking at natural features like weather, lightning -- probability of having fires
+Second model looking at population 
