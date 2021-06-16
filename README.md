@@ -1,27 +1,19 @@
 # project_one
 group project
 
-## Team Member Roles
-**Square**: Arianna
 ​
-**Triangle**: 
-​
-**Circle**: 
-​
-**X**: 
-​
-## Selected topic
-We will be observing wildfires across the United States to see which parts of the United States has the highest frequency of fires. 
-​
-## Reason why we selected this topic
-Since wildfires are increasing in California compared to past years, we would like to see if other states/counties in this country are experiencing the same. 
-​
-## Description of source of data
-This dataset is a sub-sample from [1.88 Million US Fires]( https://www.kaggle.com/rtatman/188-million-us-wildfires) combined with historical weather and vegetation data from the website Kaggle. 
-​
-### Source
-U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
-​
-​
-## Questions we hope to answer with this data
-1. Are other states experiencing an increase in fire frequency compared to past years?
+## Description:
+We will make a surprised machine learning model to predict if there will have devastating wildfires in country of California in certain time, such as a specific month. Therefore, the model can provide data-driven decision if we should limit any activities in that specific area. 
+
+
+## Source:
+A CSV file, which is a subset of 1.88 Million US wildfire joined with other related database, from Kaggle.
+Kaggle URL: https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes 
+CSV URL:https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
+
+## Database
+We will extract and transform the csv file by python and load to PostgreSQL database.
+
+## Team Member Roles:
+
+**Circle**: Hsinyu
