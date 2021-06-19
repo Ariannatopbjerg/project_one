@@ -1,5 +1,9 @@
 # project_one 
 
+# Retrieve county info
+
+https://geo.fcc.gov/api/census/#!/block/get_block_find
+
 # HTML Design
 
 - Use Flask app
