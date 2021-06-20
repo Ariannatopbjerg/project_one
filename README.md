@@ -33,9 +33,10 @@ County data.
 ### Question we hope to answer with this data
 Our project consists of analyzing fire data to determine at what accuracy if any, can we predict the class of the fire size.
 
+### Analysis Phase
+
 ### Google Slides for Presentation
 [Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
-
 
 ## Project TimeLine
 - Looking over dataset's profile (pandas profiling)
@@ -49,6 +50,9 @@ Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/mai
 
 ### Database Code
 [Database connection](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_DB_Connect.ipynb)
+
+ERD
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ERD-Wildfire.png)
 
 ### Machine Learning Model Code
 Model Progression: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForest_v1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForest_v2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForest_v3.ipynb), [Pt.4](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/randomforestclassifier_trial_and_error_91.ipynb)
