@@ -28,7 +28,7 @@ This dataset is a sub-sample from [1.88 Million US Fires]( https://www.kaggle.co
 
 U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
 
-County data. 
+County data. https://geo.fcc.gov/api/census/
 
 ### Question we hope to answer with this data
 Our project consists of analyzing fire data to determine at what accuracy if any, can we predict the class of the fire size.
