@@ -21,7 +21,7 @@ We utilized panda's profiling to visualize metadata of the original dataset. We 
 ### Team communication protocol:
 We will be communicating via Slack, Google Meet, TA meeting hours, and class breakout rooms.
 
-### Dataset Cleaning Progression
+### Dataset cleaning progression
 Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb)
 
 ## Machine Learning Model 
