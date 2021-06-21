@@ -17,6 +17,8 @@ We utilized panda's profiling to visualize metadata of the original dataset. We 
 ### Google Slides for Presentation
 [Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
 
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/google_slide.png)
+
 ## GitHub
 ### Team communication protocol:
 We will be communicating via Slack, Google Meet, TA meeting hours, and class breakout rooms.
