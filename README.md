@@ -58,6 +58,8 @@ The tools we plan to use: HTML Design
 - Heroku to host URL
 - Heroku project name is ucb-projectone. Users will select county and month from drop down list, and the model will provide the class of the fire size.
 
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/storyboard.png)
+
 **Database:** PostgreSQL 11 - pgAdmin 4
 
 **Code:** Jupyter Notebook (Python)
