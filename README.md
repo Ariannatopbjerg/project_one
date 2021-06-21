@@ -11,7 +11,7 @@
 
 # Deliverable 2
 
-### Team communication Protocol:
+### Team communication protocol:
 We will be communicating via Slack, Google Meet, TA meeting hours, and class breakout rooms.
 
 ## Presentation 
@@ -50,18 +50,21 @@ Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/mai
 ### Database 
 [Database connection](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_DB_Connect.ipynb)
 
-In the code above, you will see the creation of a new dataset for counties. We scraped this data from the [Federal Communications Commission]( https://geo.fcc.gov/api/census/) with our latitudes and longitudes from our Wildfire dataset. We then joined the two datasets together; shown below, using PostgreSQL as our database. We used SQLAlchemy for the connection string between the database and jupyter notebook. 
+[SQL database code](https://github.com/Ariannatopbjerg/US_Wildfire/tree/main/sql)
 
-### Cleaning Dataset Progression
-Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb)
+In the database connection code, you will see the creation of a new dataset for counties. We scraped this data from the [Federal Communications Commission]( https://geo.fcc.gov/api/census/) with our latitudes and longitudes from our Wildfire dataset. We then joined the two datasets together; shown below, using PostgreSQL as our database. We used SQLAlchemy for the connection string between the database and jupyter notebook. 
 
-### Database Code
-[Database connection](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_DB_Connect.ipynb)
+**ERD**
 
-
-ERD
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ERD-Wildfire.png)
 
+**Join Code**
+
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_code.png)
+
+**Join Output**
+
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_outputdata.png)
 
 ### Machine Learning Model 
 We utilized panda's profiling to visualize metadata of the original dataset. We then removed nulls, checked for duplicates, removed noncontributing data based on our ML model. 
