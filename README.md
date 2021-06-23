@@ -2,18 +2,19 @@
 group project
 
 ​
-## Description:
-We will make a surprised machine learning model to predict if there will have devastating wildfires in country of California in certain time, such as a specific month. Therefore, the model can provide data-driven decision if we should limit any activities in that specific area. 
+## Tableau
+
+1. Wildfire_by_State(Map)
+
+https://public.tableau.com/views/wildfire_test/Wildfire_by_StateMap?:language=en-US&:display_count=n&:origin=viz_share_link
+
+![Wildfire_by_State(Map)](Resources/Wildfire_by_State(Map).PNG)
 
 
-## Source:
-A CSV file, which is a subset of 1.88 Million US wildfire joined with other related database, from Kaggle.
-Kaggle URL: https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes 
-CSV URL:https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
+2. Wildfire_Cause(Pie).PNG
 
-## Database
-We will extract and transform the csv file by python and load to PostgreSQL database.
+https://public.tableau.com/views/wildfire_test/WildfireCausePie?:language=en-US&:display_count=n&:origin=viz_share_link
 
-## Team Member Roles:
+![Wildfire_Cause(Pie)](Resources/Wildfire_Cause(Pie).PNG)
 
-**Circle**: Hsinyu
+
