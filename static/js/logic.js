@@ -9,3 +9,14 @@ let street=L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tile
 });
 
 street.addTo(map);
+
+
+
+// Read wildfire dataset for map
+d3.csv("../wildfire_data_final.csv").then(function(data) {
+	// console.log(data)
+	data.forEach(function(item){
+		var marker = L.marker([item.Latitude, item.Longitude]).addTo(map);
+	})
+});
+

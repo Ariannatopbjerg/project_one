@@ -24,6 +24,7 @@
     
     <body>
         <div class="container px-4">
+          <div class="content-block-section text-block>">           
             <div class="row">
               <div class="col-xs-20 col-sm-6 col-md-12 jumbotron text-center">
                 <h1 style="color:blue">Wildfire across USA</h1>
@@ -38,51 +39,66 @@
                 </div>
               </div>
             </div>
-        
-        
-            
-        
-              <div class="col-xs-5 col-sm-5 row gx-5">
-                <div id="bar"></div>
-              </div>
-        
-              <div class="col-xs-6 col-sm-4 row gx-5">
-                <div id="gauge"></div>
-              </div>
-        
-            </div>
-        
-        
-            <div class="row">
-              <div class="col-xs-24 col-sm-12 col-md-12 gy-5">
-                <div id="bubble"></div>
-              </div>
-        
-        
-            </div>
           </div>
 
-        <div id="mapid"></div>
+        <section class="content-block embed-form">  
+          <div class='tableauPlaceholder' id='viz1624599552452' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Wildfire_final&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624599552452');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='604px';vizElement.style.height='830px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='604px';vizElement.style.height='830px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </section>
 
-        <div class="row">
-            <div class="col-xs-4 col-sm-2 col-md-2">
-              <div class="well">
-                <h5>Test Subject ID No.:</h5>
+
+        <!--<div id="mapid" class="leaflet-container leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag">
+          <div class="leaflet-control-container">
+          
+          </div>
+        </div>-->
+        
+        <div class="content-block-section text-block">
+          <div class="row">
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <!-- <div class="well">-->
+                <h5>State</h5>
                 <!-- <select id="selDataset"></select> -->
                 <select id="selDataset" onchange="optionChanged(this.value)"></select>
               </div>
-              <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Demographic Info</h3>
-                </div>
-                <div id="sample-metadata" class="panel-body"></div>
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <h5>County</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
               </div>
-            </div>
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <h5>Month</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+              </div>
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <h5>Cause</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+              </div>
+          </div>
         </div>
 
-        <div>
-            <div class='tableauPlaceholder' id='viz1624417064083' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='wildfire_test&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624417064083');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <div class="row">
+          <div class="col-md-9">
+            <table class="table table-striped">
+              <thead>
+                <h5>Prediction Result</h5>
+                <tr>
+                  <th>State</th>
+                  <th>County</th>
+                  <th>Month</th>
+                  <th>Cause</th>
+                  <th>Fire class</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
+
+
+        <div class='tableauPlaceholder' id='viz1624600881875' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Wildfire_final&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624600881875');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1004px';vizElement.style.height='830px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1004px';vizElement.style.height='830px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+        <!--<div>
+            <div class='tableauPlaceholder' id='viz1624417064083' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='wildfire_test&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624417064083');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>-->
 
 
 
