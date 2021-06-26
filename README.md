@@ -25,8 +25,6 @@ We utilized panda's profiling to visualize metadata of the original dataset. We 
 ### Google Slides for Presentation
 [Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
 
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/google_slide.png)
-
 ## GitHub
 ### Outline of Project
 ### Dataset cleaning progression
@@ -58,13 +56,10 @@ In the database connection code, you will see the creation of a new dataset for 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_outputdata.png)
 
 ## DashBoard
-✓ Images from the initial analysis
+(Link to html)
 
 ✓ Data (images or report) from the machine learning task
 
-✓ At least one interactive element
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/storyboard.png)
 
 
 
