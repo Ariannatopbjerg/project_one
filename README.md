@@ -1,20 +1,19 @@
-﻿# US_Wildfire
+# US_Wildfire Segment 3
 
-# Segment 3
 
-## Presentation 
+
+## Project Overview
 We decided to analyze wildfires across the United States. The members of our team live or have lived in the Bay Area of California. A few years ago, when the fires were running rampant, we all experienced ashes raining from the sky and not being able to see the sun for days. This topic touches us personally and piques our interest. To know more about this topic and future potential wildfires, we want to see if it is possible to predict future fire sizes from past fire data. This dataset that we chose, is a sub-sample from [1.88 Million US Fires]( https://www.kaggle.com/rtatman/188-million-us-wildfires) combined with historical weather and vegetation data from the website Kaggle. The question that we want to answer with this data is to determine at what accuracy if any, can we predict the class size of a fire.
 
 ***Sources***
 
-U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
+*[U.S. Wildfire data (plus other attributes)](https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv)*
 
-County data. https://geo.fcc.gov/api/census/
+*[County data](https://geo.fcc.gov/api/census/)*
 
-### Description of the data exploration phase of the project
-We utilized Panda's profiling to visualize metadata of the original dataset. We then removed nulls, checked for duplicates, and removed noncontributing data, based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL.
+## Resources
+We utilized Panda's profiling to visualize metadata of the original dataset. We then [removed nulls](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb), [checked for duplicates](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), and [removed noncontributing data](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL. Listed below are the numerous technology, programming language and tools we have utilized:
 
-### Technologies, languages, tools, and algorithms used
 - Jupyter Notebook 
 - PostgresSQL 
 - Flask app 
@@ -27,12 +26,7 @@ We utilized Panda's profiling to visualize metadata of the original dataset. We 
 - SQL
 - Machine Learning Random Forest Classifier 
 
-### Google Slides Draft
-[Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
-
-## GitHub
-### Dataset cleaning progression
-Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb)
+A copy of our presentation will be available on [google slides](https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p).
 
 ## Machine Learning Model 
 - Utilized Panda's profiling to visualize metadata of the original dataset. Removed nulls, checked for duplicates, and removed noncontributing data.
@@ -52,19 +46,11 @@ Model Progression: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/ma
 
 [SQL database code](https://github.com/Ariannatopbjerg/US_Wildfire/tree/main/sql)
 
-In the database connection code, you will see the creation of a new dataset for counties. We scraped this data from the [Federal Communications Commission]( https://geo.fcc.gov/api/census/) with our latitudes and longitudes from our Wildfire dataset. We then joined the two datasets together; shown below, using PostgreSQL as our database. We used SQLAlchemy for the connection string between the database and jupyter notebook. 
+In the database connection code, you will see the creation of a new dataset for counties. We scraped this data from the [Federal Communications Commission]( https://geo.fcc.gov/api/census/) with our latitudes and longitudes from our Wildfire dataset. We then [joined the two datasets together](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_code.png); shown below, using PostgreSQL as our database. We used SQLAlchemy for the connection string between the database and jupyter notebook. 
 
 **ERD**
 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ERD-Wildfire.png)
-
-**Join Code**
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_code.png)
-
-**Join Output**
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_outputdata.png)
 
 ## DashBoard
 [index.html draft](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Dashboard/index.html)
@@ -72,6 +58,8 @@ In the database connection code, you will see the creation of a new dataset for 
 **Image from the machine learning task**
 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/various_accuracy_scores.png)
+
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ML_model_70_percent.png)
 
 
 
