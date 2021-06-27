@@ -7,14 +7,13 @@ We decided to analyze wildfires across the United States. The members of our tea
 
 ***Sources***
 
-U.S. Wildfire data (plus other attributes). https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv
+*[U.S. Wildfire data (plus other attributes)](https://www.kaggle.com/capcloudcoder/us-wildfire-data-plus-other-attributes?select=FW_Veg_Rem_Combined.csv)*
 
-County data. https://geo.fcc.gov/api/census/
+*[County data](https://geo.fcc.gov/api/census/)*
 
-### Description of the data exploration phase of the project
-We utilized Panda's profiling to visualize metadata of the original dataset. We then removed nulls, checked for duplicates, and removed noncontributing data, based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL.
+## Resources
+We utilized Panda's profiling to visualize metadata of the original dataset. We then removed nulls, checked for duplicates, and removed noncontributing data, based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL. Listed below are the numerous technology, programming language and tools we have utilized:
 
-### Technologies, languages, tools, and algorithms used
 - Jupyter Notebook 
 - PostgresSQL 
 - Flask app 
@@ -27,8 +26,7 @@ We utilized Panda's profiling to visualize metadata of the original dataset. We 
 - SQL
 - Machine Learning Random Forest Classifier 
 
-### Google Slides Draft
-[Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
+A copy of our presentation will be available on [google slides](https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p).
 
 ## GitHub
 ### Dataset cleaning progression
