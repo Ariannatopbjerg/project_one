@@ -55,7 +55,7 @@ In the database connection code, you will see the creation of a new dataset for 
 ## DashBoard
 [index.html draft](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Dashboard/index.html)
 
-**Image from the machine learning task**
+**Images from the machine learning task**
 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/various_accuracy_scores.png)
 
