@@ -12,7 +12,7 @@ We decided to analyze wildfires across the United States. The members of our tea
 *[County data](https://geo.fcc.gov/api/census/)*
 
 ## Resources
-We utilized Panda's profiling to visualize metadata of the original dataset. We then removed nulls, checked for duplicates, and removed noncontributing data, based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL. Listed below are the numerous technology, programming language and tools we have utilized:
+We utilized Panda's profiling to visualize metadata of the original dataset. We then [removed nulls](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb), [checked for duplicates](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), and [removed noncontributing data](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL. Listed below are the numerous technology, programming language and tools we have utilized:
 
 - Jupyter Notebook 
 - PostgresSQL 
@@ -27,10 +27,6 @@ We utilized Panda's profiling to visualize metadata of the original dataset. We 
 - Machine Learning Random Forest Classifier 
 
 A copy of our presentation will be available on [google slides](https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p).
-
-## GitHub
-### Dataset cleaning progression
-Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb)
 
 ## Machine Learning Model 
 - Utilized Panda's profiling to visualize metadata of the original dataset. Removed nulls, checked for duplicates, and removed noncontributing data.
@@ -50,19 +46,11 @@ Model Progression: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/ma
 
 [SQL database code](https://github.com/Ariannatopbjerg/US_Wildfire/tree/main/sql)
 
-In the database connection code, you will see the creation of a new dataset for counties. We scraped this data from the [Federal Communications Commission]( https://geo.fcc.gov/api/census/) with our latitudes and longitudes from our Wildfire dataset. We then joined the two datasets together; shown below, using PostgreSQL as our database. We used SQLAlchemy for the connection string between the database and jupyter notebook. 
+In the database connection code, you will see the creation of a new dataset for counties. We scraped this data from the [Federal Communications Commission]( https://geo.fcc.gov/api/census/) with our latitudes and longitudes from our Wildfire dataset. We then [joined the two datasets together](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_code.png); shown below, using PostgreSQL as our database. We used SQLAlchemy for the connection string between the database and jupyter notebook. 
 
 **ERD**
 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ERD-Wildfire.png)
-
-**Join Code**
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_code.png)
-
-**Join Output**
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_outputdata.png)
 
 ## DashBoard
 [index.html draft](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Dashboard/index.html)
