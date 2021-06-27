@@ -35,15 +35,15 @@ We utilized Panda's profiling to visualize metadata of the original dataset. We 
 Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb)
 
 ## Machine Learning Model 
-- Utilized Panda's profiling to visualize metadata of the original dataset. We removed nulls, checked for duplicates, and removed noncontributing data.
+- Utilized Panda's profiling to visualize metadata of the original dataset. Removed nulls, checked for duplicates, and removed noncontributing data.
 - Removed features after initial machine learning model due to a negative accuracy score of -117%. 
 - Removed additional features to improve accuracy score.
 - Elected random sampling for splitting, training, and testing dataset.
-- Used Random Forest Machine Learning Model in lieu of using Decision Trees due to better performance. Limitations are greater time required for training as it combines a lot of decision trees to determine the class as well as requiring much computational power and resources as it builds numerous trees to combine their outputs. 
+- Used Random Forest Machine Learning Model in lieu of using Decision Trees due to better performance. Limitations for Random Forest are greater time required for training as it combines a lot of decision trees to determine the class as well as requiring much computational power and resources as it builds numerous trees to combine their outputs. 
 - Used Random Forest Classifier instead of Random Forest Regressor since the prediction will be categorical and not continuous.
 - We found a useful article called ["Hyperparameter Tuning the Random Forest in Python"]( https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74), that helped explain grid searches and the various hyperparameters that can be used for this model. 
 - The initial accuracy score of the model was 91%. This was due to a high correlation between the feature of fire size and the dependent variable fire size class. 
-- Changed features and hyperparameters to correct the high correlation. The new model predicts the fire size class with the accuracy score of 70%.
+- Additional training was completed with changed features and hyperparameters to correct the high correlation. The new model predicts the fire size class with the accuracy score of 70%.
 
 Model Progression: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForest_v1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForest_v2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForest_v3.ipynb), [Pt.4](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/randomforestclassifier_trial_and_error_91.ipynb), [Random Forest Classifier Final](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_model_wildfire_segment_2.ipynb), [Edited Model](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_model_wildfire_tweaking.ipynb)
 
