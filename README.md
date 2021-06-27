@@ -12,7 +12,7 @@ We decided to analyze wildfires across the United States. The members of our tea
 *[County data](https://geo.fcc.gov/api/census/)*
 
 ## Resources
-We utilized Panda's profiling to visualize metadata of the original dataset. We then [removed nulls](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [checked for duplicates](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/wildfire_cleanup_pt2.ipynb), and [removed noncontributing data](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/wildfire_cleanup_pt3.ipynb). We used random forest classification model integrated with postgresSQL. Listed below are the numerous technology, programming language and tools we have utilized: 
+We utilized Panda's profiling to visualize metadata of the original dataset. We then [removed nulls](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb), [checked for duplicates](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/wildfire_cleanup_pt1.ipynb), and [removed noncontributing data](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/wildfire_cleanup_pt3.ipynb). We used random forest classification model integrated with postgresSQL. Listed below are the numerous technology, programming language and tools we have utilized: 
 
 - Jupyter Notebook 
 - PostgresSQL 
