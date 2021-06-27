@@ -25,7 +25,7 @@ We utilized Panda's profiling to visualize metadata of the original dataset. We 
 - HTML
 - Javascript
 - SQL
-- Machine Learning Random Forest Classification
+- Machine Learning Random Forest Classifier 
 
 ### Google Slides Draft
 [Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
@@ -67,9 +67,11 @@ In the database connection code, you will see the creation of a new dataset for 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/join_outputdata.png)
 
 ## DashBoard
-(Link to html)
+[index.html draft](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Dashboard/index.html)
 
-✓ Data (images or report) from the machine learning task
+**Image from the machine learning task**
+
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/various_accuracy_scores.png)
 
 
 
