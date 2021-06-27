@@ -1,0 +1,13 @@
+html,
+body,
+#mapid {
+  width: 100%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+#viz1624599552452{
+  margin-left : auto;
+  margin-right: auto;
+}
