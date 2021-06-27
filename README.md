@@ -73,6 +73,8 @@ In the database connection code, you will see the creation of a new dataset for 
 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/various_accuracy_scores.png)
 
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ML_model_70_percent.png)
+
 
 
 
