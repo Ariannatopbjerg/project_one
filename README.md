@@ -15,18 +15,22 @@ County data. https://geo.fcc.gov/api/census/
 We utilized panda's profiling to visualize metadata of the original dataset. We then removed nulls, checked for duplicates, and removed noncontributing data, based on our machine learning model. We used random forest classification model. Extracting data from our database from postgresSQL.
 
 ### Technologies, languages, tools, and algorithms used
-- **Technologies**: Jupyter Notebook, PostgresSQL(pgAdmin 4)
-- **Langauges**: Python, HTML, JSON, D3
-- **Tools**: HTML Design, Flask app, Leaflet or Python Plotly, Heroku to host URL 
-- **Algorithms**: Random Forest Classification
+- Jupyter Notebook 
+- PostgresSQL 
+- Flask app 
+- Leaflet
+- Heroku
+- APIs
+- Python
+- HTML
+- Javascript
+- SQL
+- Machine Learning Random Forest Classification
 
-*Heroku project name is ucb-projectone. Users will select county and month from drop down list, and the model will provide the class of the fire size.
-
-### Google Slides for Presentation
+### Google Slides Draft
 [Link]( https://docs.google.com/presentation/d/1zNJLu_Os-ALgjHbccoEGw9cjZcJPYD_3G4ZGsKlYAwc/edit#slide=id.p)
 
 ## GitHub
-### Outline of Project
 ### Dataset cleaning progression
 Wildfire dataset: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt1.ipynb), [Pt.2](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt2.ipynb), [Pt.3](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/Wildfire_cleanup_pt3.ipynb)
 
