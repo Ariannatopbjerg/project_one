@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fire!!!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+
+  <!--Leaflet CSS file in the head section of your document-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+  <div class="container px-4"> -->
+    <div class="content-block-section text-block>">
+      <div class="row">
+        <div class="col-xs-20 col-sm-6 col-md-12 jumbotron text-center">
+          <div style="background-image: url(wildfires.jpg)" <h1 style="color:black">Wildfires Across the United States
+            </h1>
+            <p> </p>
+            <div>
+              <h1 <img src="wildir
+		      123es.jpg" "alt=" Fi e" "width=" 500" height="600"></h1>
+            </div>
+
+            <!-- <div class="container-fluid">
+              <div class="col-xs-24 col-sm-12 col-md-12 text-center gy-5">
+                <div class="well">
+                  <p style="font-weight: 700; color:Red">Explore Wildfire data.<br>
+                    The charts provide additional information.<br></p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div> -->
+
+ 
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <form class="bg-light">
+                <p>Search for State.....</p>
+                <ul class="list-group bg-dark">
+    
+                  <li class="list-group-item bg-light">
+                    <label for="state">Enter State</label><br>
+		    <!--<input type="text" placeholder="California" id="state" />-->
+		    <select id="state">
+		    </select>
+                  </li>
+    
+                  <li class="list-group-item bg-light">
+                    <label for="county">Enter County</label><br>
+                    <input type="text" placeholder="" id="county" />
+                  </li>
+
+                  <li class="list-group-item bg-light">
+                    <label for="city">Enter Year</label><br>
+                    <input type="text" placeholder="" id="city" />
+                  </li>
+    
+   
+                </ul>
+                <p></p>
+              </form>
+            </div>
+            <div class="col-md-9">
+              <table class="table table-striped">
+                <thead id="fire_table_header">
+			<!--
+                  <tr>
+                    <th>State</th>
+                    <th>County</th>
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Acreage Burned</th>
+                  </tr>
+			-->
+                </thead>
+                <tbody id="fire_table"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+    <section class="content-block embed-form">
+      <div class='tableauPlaceholder' id='viz1624599552452' style='position: relative'><noscript><a href='#'><img
+              alt='Dashboard 1 '
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard1&#47;1_rss.png'
+              style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Wildfire_final&#47;Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard1&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object></div>
+      <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1624599552452'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '604px'; vizElement.style.height = '830px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '604px'; vizElement.style.height = '830px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+    </section>
+
+
+    <!--<div id="mapid" class="leaflet-container leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag">
+      <div class="leaflet-control-container">
+      
+      </div>
+    </div>-->
+
+    <div class='tableauPlaceholder' id='viz1624600881875' style='position: relative'><noscript><a href='#'><img
+            alt='Dashboard 2 '
+            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard2&#47;1_rss.png'
+            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='Wildfire_final&#47;Dashboard2' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image'
+          value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard2&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+      </object></div>
+    <script
+      type='text/javascript'>                    var divElement = document.getElementById('viz1624600881875'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1004px'; vizElement.style.height = '830px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1004px'; vizElement.style.height = '830px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+
+    <div>
+        <div class='tableauPlaceholder' id='viz1624417064083' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='wildfire_test&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1624417064083');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+
+    <!--Leaflet JavaScript file-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+
+    <!-- API key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      function get_states() {
+         d3.csv("../Resources/wildfire_data_final.csv").then(function (data) {
+	   var states = [];
+	   data.forEach(function (d) {
+	     if (states.indexOf(d.State) < 0) {
+               states.push(d.State);
+	     }
+	   });
+	   states.sort();
+	   states.forEach(function(s) {
+	     $("#state").append("<option>" + s + "</option>");
+	   });
+	   console.log("csv states data", states);
+	 });
+
+      }
+
+      function filter_state(state) {
+        $("#fire_table").empty();
+        var headers = { 'State': 'State', 'Fire Cause': 'Fire_Cause', 'Fire Size': 'Fire_Size', 'Latitude': 'Latitude', 'Longitude': 'Longitude' }; 
+        var keys = Object.keys(headers);
+        //console.log("keys", keys);
+        var thead = d3.select("thead");
+        let header = tbody.append("tr");
+        keys.forEach(function(key) {
+          let cell = header.append("th");
+          cell.text(key);
+	});
+        d3.csv("../Resources/wildfire_data_final.csv").then(function (data) {
+	  datafilter = data.filter(holder => holder.State == state);
+          datafilter.forEach((dataRow) => {
+                  let row = tbody.append("tr");
+	          console.log("dataRow", dataRow);
+	          keys.forEach(function(key) {
+	            let cell = row.append("td");
+	            cell.text(dataRow[headers[key]]);
+	          });
+          });
+        });
+      }
+
+      $(document).ready(function() {
+	//console.log("hello world!");
+	//grab the states from postgres or from csv
+	var states = get_states();
+	$("#state").on('change', function() {
+	  var val = $("#state").val();
+          console.log("state value = ", val);
+	  filter_state(val);
+	});
+      });
+    </script>
+
+
+</body>
+
+</html>
