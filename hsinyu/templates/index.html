@@ -51,7 +51,7 @@
     </div>
   </div>
   <div class="col-md-12">
-    <p style="color: black; text-align: center; font-size: 30px;" id="p1">
+    <p style="color: black; text-align: center; font-size: 28px;" id="p1">
       <strong>Living in California while fire was rampant, it sparked our interest to analyze wildfires across the
         United States
         from 1992-2015. We utilized Random Forest Machine Learning Model to predict the class of the fire size in an
@@ -67,19 +67,19 @@
     <div class="row">
       <div class="col-md-3">
         <form class="bg-light">
-          <p style=color:red>Please click to display fire data from 1992-2015 of the state and/or county of interest.</p>
+          <p style=color:red>Please make selection to display fire data from 1992-2015 of the state and/or county of interest.
+          </p>
           <ul class="list-group bg-dark">
 
+          <!-- Comment out previous selection group  -->
             <!-- <li class="list-group-item bg-light">
                 <label for="enter_state">Enter State</label><br>
                 <select id="state" onchange="optionChanged(this.value)">
                   <option disabled selected value> -- select an option -- </option>
                 </select>
                  -->
-
             <!--<input type="text" placeholder="California" id="state" />-->
             <!-- </li>
-
               <li class="list-group-item bg-light">
                 <label for="enter_county">Enter County</label><br>
                 <select id="county" onchange="optionChanged(this.value)">
@@ -87,11 +87,11 @@
                 </select>
               </li>
                -->
-
             <!-- <li class="list-group-item bg-light">
                 <label for="enter_year">Enter Year</label><br>
                 <select id="year" onchange="optionChanged(this.value)"></select>
               </li> -->
+
             <li class="list-group-item bg-light">
               <label for="state">Enter State</label><br>
               <!--<input type="text" placeholder="California" id="state" />-->
@@ -105,13 +105,14 @@
               <select id="county">
                 <option disabled selected value> -- select an option -- </option>
               </select>
-
             </li>
 
           </ul>
           <p></p>
         </form>
       </div>
+
+      <!-- Diplay selection results list -->
       <div class="col-md-8">
         <table class="table table-striped">
           <!-- <table class="table table-bordered"> -->
@@ -125,7 +126,7 @@
                 <th>Acreage Burned</th>
                 <th>Fire Cause</th>
               </tr>
-  -->
+            -->
           </thead>
           <tbody id="fire_table"></tbody>
         </table>
@@ -145,6 +146,7 @@
   </div>
 
   <div>
+    <!-- Tableau - Map of US Fires -->
     <section class="content-block embed-form">
       <div class='tableauPlaceholder' id='viz1624599552452' style='position: relative;'>
         <noscript><a href='#'><img alt='Dashboard 1 '
@@ -202,6 +204,7 @@
   </div>
 
   <div>
+    <!-- Tableau - Pie chart fire acres -->
     <section class="content-block embed-form">
       <div class='tableauPlaceholder' id='viz1624600881875' style='position: relative'>
         <noscript>
@@ -250,7 +253,7 @@
         <!-- <div class="col-md-12">
           <p style="color: red; text-align: center; font-size: 22px;" id="p1">
             <!-- <strong>can we fit text here???</strong></b> -->
-          <!-- <div class="col-md-12; text-align: right; font-size: 24px;" id="p1">
+        <!-- <div class="col-md-12; text-align: right; font-size: 24px;" id="p1">
             <h3>Machine Learning Model Accuracy</h3>
             <p>Using Random Forest Classifier, the model predicts<br>fire size class with an accuracy score of 70%</p>
           </div>
@@ -259,19 +262,21 @@
 
       </div>
 
-      <!-- <div class="col-md-12">
+  </div>
+    <!-- <div class="col-md-12">
         <p style="color: red; text-align: center; font-size: 22px;" id="p1">
           <!-- <strong>can we fit text here???</strong></b> -->
-      <div class="col-md-12; text-align: right; font-size: 24px;" id="p1">
-        <h3>Machine Learning Model Accuracy</h3>
-        <p>Using Random Forest Classifier, the model predicts<br>fire size class with an accuracy score of 70%</p>
-      </div> -->
+      <!-- <div class="col-md-2; text-align: right; font-size: 24px;" id="p1"> -->
+  <div style="color: black; text-align: center; font-size: 24px; id="p1">
+    <h3>Machine Learning Model Accuracy</h3>
+    <h4>Using Random Forest Classifier, the model predicts<br>fire size class with an accuracy score of 70%</h4>
+  </div> -->
 
-      </p>
-  </div>
   </section>
 
-  <div class='tableauPlaceholder' id='viz1625112874949' style='position: relative'><noscript><a href='#'><img
+
+<!-- remove last pie chart -->
+  <!-- <div class='tableauPlaceholder' id='viz1625112874949' style='position: relative'><noscript><a href='#'><img
           alt='Dashboard 2 '
           src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard2&#47;1_rss.png'
           style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
@@ -294,14 +299,12 @@
     type='text/javascript'> var divElement = document.getElementById('viz1625112874949'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1004px'; vizElement.style.height = '877px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1004px'; vizElement.style.height = '877px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
 
 
-  </div>
-
+  </div> -->
 
   <!--Leaflet JavaScript file-->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-
   <!-- API key -->
   <script type="text/javascript" src="static/js/config.js"></script>
   <!-- Our JavaScript -->
@@ -311,7 +314,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <script>
+<!-- Start selection display logic -->
+ <script>
 
     var selectedstate = null;
     function get_states() {
