@@ -1,13 +1,84 @@
+
 html,
 body,
 #mapid {
   width: 100%;
-  height: 80%;
-  padding: 0;
+  height: 640px;
+  padding: 80px;
   margin: 0;
 }
+
+#header {
+  background-image: url("../../Resources/wildfire.jpg");
+  background-size: 100% 100%;
+  text-align: center;
+} 
+
+option{
+  font-size: 32px;
+}
+
+form{
+  font-size: 35px;
+}
+
+table tbody tr {
+  font-size: 35px;
+}
+
+
+
+
+
+#button1{
+  background-color: #CE3607;
+  border-radius: 12px;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#button2{
+  background-color: #CE3607;
+  border-radius: 12px;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top:15px;
+  margin-bottom:15px;
+  margin-right:15px;
+  margin-left:15px;
+}
+
+
+
 
 #viz1624599552452{
   margin-left : auto;
   margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
 }
+
+#viz1624600881875{
+  margin-left : auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+
+
+
+.element {
+  padding: 1rem;
+  margin-bottom: 10rem;
+}
+
+
