@@ -293,6 +293,10 @@
 
 
     var selectedstate = null;
+    var myfire = L.icon({
+          iconUrl: 'free-fire-icon-8.jpg',
+          iconSize: [20, 20]
+    });
     function get_states() {
       d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
         var states = [];
@@ -339,6 +343,7 @@
         let cell = header.append("th");
         cell.text(key);
       });
+      $(".leaflet-marker-icon").remove();
       d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
 
         datafilter = data.filter(holder => {
@@ -350,6 +355,7 @@
         datafilter.forEach((dataRow) => {
           let row = tbody.append("tr");
           //console.log("dataRow", dataRow);
+          L.marker([dataRow.Latitude, dataRow.Longitude],{icon:myfire}).addTo(map);
           keys.forEach(function (key) {
             let cell = row.append("td");
             cell.text(dataRow[headers[key]]);
@@ -373,15 +379,17 @@
         let cell = header.append("th");
         cell.text(key);
       });
+      $(".leaflet-marker-icon").remove();
       d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
         datafilter = data.filter(holder => holder.State_name == state);
         datafilter.forEach((dataRow) => {
           let row = tbody.append("tr");
           console.log("dataRow", dataRow);
+          
+          L.marker([dataRow.Latitude, dataRow.Longitude],{icon:myfire}).addTo(map);
           keys.forEach(function (key) {
             let cell = row.append("td");
             cell.text(dataRow[headers[key]]);
-            return L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
           });
         });
       });

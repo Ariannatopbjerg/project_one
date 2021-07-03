@@ -62,14 +62,14 @@ var myfire = L.icon({
     iconSize: [20, 20]
 });
 // load dataset with special fire markers, slice rows
-d3.csv("Resources/wildfire_data_final_of_final.csv").then(function(data) {
-    // console.log(data)    
-    data.forEach(function(item){
-		//console.log(CA)
-	    if ((item.State) == "CA") 
-			return L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
-	});
-});
+// d3.csv("Resources/wildfire_data_final_of_final.csv").then(function(data) {
+//     // console.log(data)    
+//     data.forEach(function(item){
+// 		//console.log(CA)
+// 	    if ((item.State) == "CA") 
+// 			return L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
+// 	});
+// });
 		// console.log(item.State=="CA")
 //         data.slice(0,200).forEach(function(item){
 //         L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
