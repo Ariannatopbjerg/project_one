@@ -21,13 +21,13 @@ street.addTo(map);
 // });
 
 // Fremont
-var marker1 = L.marker([37.548271, -121.988571]).addTo(map).bindPopup("Hsinyu in Fremont",{closeOnClick: false, autoClose: false});
-// Sunnyvale
-var marker2 = L.marker([37.368832, -122.036346]).addTo(map).bindPopup("Jen in Sunnyvale",{closeOnClick: false, autoClose: false});
-// Pacifica
-var marker3= L.marker([37.6138, -122.4869]).addTo(map).bindPopup("Natalie in Pacifica ",{closeOnClick: false, autoClose: false});
-// Albany
-var marker4 = L.marker([37.886870, -122.297748]).addTo(map).bindPopup("Arianna in Albany",{closeOnClick: false, autoClose: false});
+// var marker1 = L.marker([37.548271, -121.988571]).addTo(map).bindPopup("Hsinyu in Fremont",{closeOnClick: false, autoClose: false});
+// // Sunnyvale
+// var marker2 = L.marker([37.368832, -122.036346]).addTo(map).bindPopup("Jen in Sunnyvale",{closeOnClick: false, autoClose: false});
+// // Pacifica
+// var marker3= L.marker([37.6138, -122.4869]).addTo(map).bindPopup("Natalie in Pacifica ",{closeOnClick: false, autoClose: false});
+// // Albany
+// var marker4 = L.marker([37.886870, -122.297748]).addTo(map).bindPopup("Arianna in Albany",{closeOnClick: false, autoClose: false});
 
 // var popup1 = L.popup()
 //     .setLatLng([37.548271, -121.988571])
