@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Prediction</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <!-- Leaflet CSS file in the head section of your document -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/> 
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- d3 JavaScript-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div>
+    <!-- <div class="container"> -->
+
+      <!-- Creating Buttons: About Us & Resources-->
+    <div class="bg-light clearfix">
+      <row>
+        <div class="col-md-12 bg-light text-right">
+          <button type="button" id="button1" class="btn btn-primary float-right">About Us</button>
+          <button type="button" id="button2" class="btn btn-primary float-right">Resources</button>
+        </div>         
+      </row>
+    </div> 
+    
+    <!-- Add Jumpotron to Header -->
+    <div id="header" class="col-md-12 jumbotron text-center">
+      <h1 style="color: white">Wildfire Interactive Visualization Dashboard</h1>
+    </div>
+  
+    <!-- Add Jumpotron to Header -->
+    <div class="container">
+      <h2 style="color:blue"></h>
+    </div>
+
+
+    <!-- Add filter to present table-->
+<!-- 
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <form class="bg-light">
+            <p> Please click to display fire data from 1992-2015 of the state and/or county of interest</p>
+            <ul class="list-group bg-dark"> -->
+
+              <!-- <li class="list-group-item bg-light">
+                <label for="enter_state">Enter State</label><br>
+                <select id="state" onchange="optionChanged(this.value)">
+                  <option disabled selected value> -- select an option -- </option>
+                </select>
+                 -->
+                  
+
+                <!--<input type="text" placeholder="California" id="state" />-->
+              <!-- </li>
+
+              <li class="list-group-item bg-light">
+                <label for="enter_county">Enter County</label><br>
+                <select id="county" onchange="optionChanged(this.value)">
+                  <option disabled selected value> -- select an option -- </option>
+                </select>
+              </li>
+               -->
+              
+
+
+
+              <!-- <li class="list-group-item bg-light">
+                <label for="enter_year">Enter Year</label><br>
+                <select id="year" onchange="optionChanged(this.value)"></select>
+              </li> -->
+              <!-- <li class="list-group-item bg-light">
+                <label for="state">Enter State</label><br> -->
+    <!--<input type="text" placeholder="California" id="state" />-->
+              <!-- <select id="state">
+                <option disabled selected value> -- select an option -- </option>
+              </select>
+              </li>
+
+              <li class="list-group-item bg-light">
+                <label for="county">Enter County</label><br>
+                <select id="county">
+                  <option disabled selected value> -- select an option -- </option>
+                </select>
+              </li>
+
+            </ul>
+            <p></p>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-striped">
+            <thead id="fire_table_header"> -->
+  <!--
+              <tr>
+                <th>State</th>
+                <th>County</th>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Acreage Burned</th>
+                <th>Fire Cause</th>
+              </tr>
+  -->
+            <!-- </thead>
+            <tbody id="fire_table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- The div that holds our map -->
+    <div class="container">
+      <div id="mapid"></div>
+    </div>
+
+    <div>
+    <hr>
+    <p>
+    </div>
+
+   
+
+
+    <!--Leaflet JavaScript file-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+      
+    <!-- API key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+    <script type="text/javascript" src="static/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+
+
+  </div>
+  
+</body>
+
+</html>

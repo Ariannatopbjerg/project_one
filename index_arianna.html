@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Prediction</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <!-- Leaflet CSS file in the head section of your document -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/> 
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- d3 JavaScript-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <div>
+    <!-- <div class="container"> -->
+
+      <!-- Creating Buttons: About Us & Resources-->
+    <div class="bg-light clearfix">
+      <row>
+        <div class="col-md-12 bg-light text-right">
+          <button type="button" id="button1" class="btn btn-primary float-right">About Us</button>
+          <button type="button" id="button2" class="btn btn-primary float-right">Resources</button>
+        </div>         
+      </row>
+    </div> 
+    
+    <!-- Add Jumpotron to Header -->
+    <div id="header" class="col-md-12 jumbotron text-center">
+      <h1 style="color: white">Wildfire Interactive Visualization Dashboard</h1>
+    </div>
+  
+    <!-- Add Jumpotron to Header -->
+    <div class="container">
+      <h2 style="color:blue"></h>
+    </div>
+
+
+    <!-- Add filter to present table-->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <form class="bg-light">
+            <p> Please click to display fire data from 1992-2015 of the state and/or county of interest</p>
+            <ul class="list-group bg-dark">
+
+              <!-- <li class="list-group-item bg-light">
+                <label for="enter_state">Enter State</label><br>
+                <select id="state" onchange="optionChanged(this.value)">
+                  <option disabled selected value> -- select an option -- </option>
+                </select>
+                 -->
+                  
+
+                <!--<input type="text" placeholder="California" id="state" />-->
+              <!-- </li>
+
+              <li class="list-group-item bg-light">
+                <label for="enter_county">Enter County</label><br>
+                <select id="county" onchange="optionChanged(this.value)">
+                  <option disabled selected value> -- select an option -- </option>
+                </select>
+              </li>
+               -->
+              
+
+
+
+              <!-- <li class="list-group-item bg-light">
+                <label for="enter_year">Enter Year</label><br>
+                <select id="year" onchange="optionChanged(this.value)"></select>
+              </li> -->
+              <li class="list-group-item bg-light">
+                <label for="state">Enter State</label><br>
+    <!--<input type="text" placeholder="California" id="state" />-->
+              <select id="state">
+                <option disabled selected value> -- select an option -- </option>
+              </select>
+              </li>
+
+              <li class="list-group-item bg-light">
+                <label for="county">Enter County</label><br>
+                <select id="county"></select>
+              </li>
+
+            </ul>
+            <p></p>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-striped">
+            <thead id="fire_table_header">
+  <!--
+              <tr>
+                <th>State</th>
+                <th>County</th>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Acreage Burned</th>
+                <th>Fire Cause</th>
+              </tr>
+  -->
+            </thead>
+            <tbody id="fire_table"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- The div that holds our map -->
+    <div class="container">
+      <div id="mapid"></div>
+    </div>
+
+    <div>
+    <hr>
+    <p>
+    </div>
+
+    <div>
+      <section class="content-block embed-form">  
+        <div class='tableauPlaceholder' id='viz1624599552452' style='position: relative;'>
+          <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+          </noscript>
+        <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='Wildfire_final&#47;Dashboard1' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard1&#47;1.png' /> 
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        </object>
+      
+        <script type='text/javascript'> 
+        var divElement = document.getElementById('viz1624599552452'); 
+        var vizElement = divElement.getElementsByTagName('object')[0]; 
+        if ( divElement.offsetWidth > 800 ) { 
+          vizElement.style.width='1200px'; 
+          vizElement.style.height='830px';
+        } 
+        else if ( divElement.offsetWidth > 500 ) { 
+          vizElement.style.width='1200px'; 
+          vizElement.style.height='830px';
+        } else { 
+          vizElement.style.width='100%';
+          vizElement.style.height='727px';
+        }                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+      </div>
+      </section>
+    </div>
+    
+    <div>
+      <hr>
+    </div>
+    
+    <div>
+      <section class="content-block embed-form">  
+      <div class='tableauPlaceholder' id='viz1624600881875' style='position: relative'>
+        <noscript>
+        <a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='Wildfire_final&#47;Dashboard2' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wi&#47;Wildfire_final&#47;Dashboard2&#47;1.png' /> 
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        </object>
+    
+        <script type='text/javascript'> 
+        var divElement = document.getElementById('viz1624600881875');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) { 
+          vizElement.style.width='1200px';
+          vizElement.style.height='830px';
+        } 
+        else if ( divElement.offsetWidth > 500 ) { 
+          vizElement.style.width='1200px';
+          vizElement.style.height='830px';
+        } 
+        else { 
+          vizElement.style.width='100%';
+          vizElement.style.height='727px';
+        }                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+      </div>
+      </section>
+    </div>
+
+
+
+
+    <!--Leaflet JavaScript file-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+      
+    <!-- API key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+    <!-- <script type="text/javascript" src="static/js/app.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+      var selectedstate=null;
+      function get_states() {
+         d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
+	    var states = [];
+
+     
+	   data.forEach(function (d) {
+	     if (states.indexOf(d.State) < 0) {
+               states.push(d.State);
+	     }
+ 
+	   });
+	   states.sort();
+    
+	   states.forEach(function(s) {
+	     $("#state").append("<option>" + s + "</option>");
+	   });
+    
+	  //  console.log("csv states data", states);
+	 });
+
+  }
+
+  function get_county() {
+    $("#county").empty();
+         d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
+      var county_manu=[];
+     
+	   data.forEach(function (d) {
+       if (county_manu.indexOf(d.County)<0 && d.State==selectedstate){
+        county_manu.push(d.County);
+      }      
+	   });
+	   
+     county_manu.sort();
+
+     county_manu.forEach(function(c) {
+	     $("#county").append("<option>" + c + "</option>");
+	   });
+	 });
+  }
+  function filter_county(county){
+    // console.log("filter_county", county);
+     $("#fire_table").empty();
+        var headers = { 'State': 'State', 'County': 'County', 'Fire Cause': 'Fire_Cause', 'Fire Size': 'Fire_Size','Discovery Month': 'Discovery_Month','Discovery Year': 'Discovery_Year'}; 
+        var keys = Object.keys(headers);
+        //console.log("keys", keys);
+        var thead = d3.select("thead");
+        var tbody = d3.select("tbody");
+        let header = tbody.append("tr");
+        keys.forEach(function(key) {
+          let cell = header.append("th");
+          cell.text(key);
+	      });
+        d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
+        
+	      datafilter = data.filter(holder =>{
+          // console.log(holder);
+          return (holder.State == selectedstate && holder.County == county);
+          });
+
+        // console.log(datafilter);
+        datafilter.forEach((dataRow) => {
+                  let row = tbody.append("tr");
+	          console.log("dataRow", dataRow);
+	          keys.forEach(function(key) {
+	            let cell = row.append("td");
+	            cell.text(dataRow[headers[key]]);
+	          });
+          });
+        });
+  }
+
+
+
+
+      function filter_state(state) {
+        selectedstate=state;
+        get_county();
+        $("#fire_table").empty();
+        var headers = { 'State': 'State', 'County': 'County', 'Fire Cause': 'Fire_Cause', 'Fire Size': 'Fire_Size','Discovery Month': 'Discovery_Month','Discovery Year': 'Discovery_Year'}; 
+        var keys = Object.keys(headers);
+        //console.log("keys", keys);
+        var thead = d3.select("thead");
+        var tbody = d3.select("tbody");
+        let header = tbody.append("tr");
+        keys.forEach(function(key) {
+          let cell = header.append("th");
+          cell.text(key);
+	});
+        d3.csv("Resources/wildfire_data_final_of_final.csv").then(function (data) {
+	  datafilter = data.filter(holder => holder.State == state);
+          datafilter.forEach((dataRow) => {
+                  let row = tbody.append("tr");
+	          console.log("dataRow", dataRow);
+	          keys.forEach(function(key) {
+	            let cell = row.append("td");
+	            cell.text(dataRow[headers[key]]);
+	          });
+          });
+        });
+      }
+
+      $(document).ready(function() {
+	//console.log("hello world!");
+	//grab the states from postgres or from csv
+	var states = get_states();
+	$("#state").on('change', function() {
+	  var val = $("#state").val();
+          console.log("state value = ", val);
+	  filter_state(val);
+	});
+
+	$("#county").on('change', function() {
+	  var val = $("#county").val();
+	  filter_county(val);
+	});
+
+      });
+
+  function debug(x){
+    // console.log(x);
+  }
+    </script>
+
+
+
+  </div>
+  
+</body>
+
+</html>
