@@ -57,15 +57,21 @@ var marker4 = L.marker([37.886870, -122.297748]).addTo(map).bindPopup("Arianna i
 // });
 
 // Icon options
-// var myfire = L.icon({
-//     iconUrl: 'free-fire-icon-8.jpg',
-//     iconSize: [20, 20]
-// });
+var myfire = L.icon({
+    iconUrl: 'free-fire-icon-8.jpg',
+    iconSize: [20, 20]
+});
 // load dataset with special fire markers, slice rows
-// d3.csv("Resources/wildfire_data_final.csv").then(function(data) {
-//     // console.log(data)    
-//     // data.forEach(function(item){
+d3.csv("Resources/wildfire_data_final_of_final.csv").then(function(data) {
+    // console.log(data)    
+    data.forEach(function(item){
+		//console.log(CA)
+	    if ((item.State) == "CA") 
+			return L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
+	});
+});
+		// console.log(item.State=="CA")
 //         data.slice(0,200).forEach(function(item){
 //         L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
-//     });
-// });
+//});
+//});
