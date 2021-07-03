@@ -19,7 +19,7 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
 
 </head>
-
+<body>
 <header>
   <nav>
 
@@ -31,11 +31,11 @@
       <!-- <a href="index.html">
         <button type="button" id="button2" class="btn btn-primary float-right">Home</button> -->
       <a href="pages/aboutus.html">
-        <button type="button" id="button2" class="btn btn-primary float-right">About Us</button>
+        <button type="button" id="button2" class="button2 btn btn-primary float-right">About Us</button>
       </a>
       </a>
       <a href="pages/resources.html">
-        <button type="button" id="button3" class="btn btn-primary float-right">Resources</button>
+        <button type="button" id="button3" class="button2 btn btn-primary float-right">Resources</button>
       </a>
     </div>
   </nav>
@@ -43,7 +43,7 @@
 
 <br>
 
-<body>
+
   <!-- Add Jumpotron to Header -->
   <div class="jumbotron">
     <div class="container">
@@ -265,41 +265,14 @@
   </div>
     <!-- <div class="col-md-12">
         <p style="color: red; text-align: center; font-size: 22px;" id="p1">
-          <!-- <strong>can we fit text here???</strong></b> -->
-      <!-- <div class="col-md-2; text-align: right; font-size: 24px;" id="p1"> -->
-  <div style="color: black; text-align: center; font-size: 24px; id="p1">
+          <strong>can we fit text here???</strong></b>
+      <div class="col-md-2; text-align: right; font-size: 24px;" id="p1"> -->
+  <div style="color: black; text-align: center; font-size: 24px; " id="p1">
     <h3>Machine Learning Model Accuracy</h3>
     <h4>Using Random Forest Classifier, the model predicts<br>fire size class with an accuracy score of 70%</h4>
-  </div> -->
+  </div>
 
   </section>
-
-
-<!-- remove last pie chart -->
-  <!-- <div class='tableauPlaceholder' id='viz1625112874949' style='position: relative'><noscript><a href='#'><img
-          alt='Dashboard 2 '
-          src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard2&#47;1_rss.png'
-          style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-      <param name='embed_code_version' value='3' />
-      <param name='site_root' value='' />
-      <param name='name' value='wildfire_test&#47;Dashboard2' />
-      <param name='tabs' value='no' />
-      <param name='toolbar' value='yes' />
-      <param name='static_image'
-        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard2&#47;1.png' />
-      <param name='animate_transition' value='yes' />
-      <param name='display_static_image' value='yes' />
-      <param name='display_spinner' value='yes' />
-      <param name='display_overlay' value='yes' />
-      <param name='display_count' value='yes' />
-      <param name='language' value='en-US' />
-    </object></div>
-  <script
-    type='text/javascript'> var divElement = document.getElementById('viz1625112874949'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1004px'; vizElement.style.height = '877px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1004px'; vizElement.style.height = '877px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-
-
-  </div> -->
 
   <!--Leaflet JavaScript file-->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -317,9 +290,11 @@
 <!-- Start selection display logic -->
  <script>
 
+
+
     var selectedstate = null;
     function get_states() {
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      d3.csv("static/data/wildfire_data_final.csv").then(function (data) {
         var states = [];
         data.forEach(function (d) {
           if (states.indexOf(d.State_name) < 0) {
@@ -336,7 +311,7 @@
 
     function get_county() {
       $("#county").empty();
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      d3.csv("static/data/wildfire_data_final.csv").then(function (data) {
         var county_manu = [];
         data.forEach(function (d) {
           if (county_manu.indexOf(d.County) < 0 && d.State_name == selectedstate) {
@@ -344,6 +319,7 @@
           }
         });
         county_manu.sort();
+        $("#county").append("<option>--select an option--</option>");
         county_manu.forEach(function (c) {
           $("#county").append("<option>" + c + "</option>");
         });
@@ -363,7 +339,7 @@
         let cell = header.append("th");
         cell.text(key);
       });
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      d3.csv("static/data/wildfire_data_final.csv").then(function (data) {
 
         datafilter = data.filter(holder => {
           // console.log(holder);
@@ -397,7 +373,7 @@
         let cell = header.append("th");
         cell.text(key);
       });
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      d3.csv("static/data/wildfire_data_final.csv").then(function (data) {
         datafilter = data.filter(holder => holder.State_name == state);
         datafilter.forEach((dataRow) => {
           let row = tbody.append("tr");

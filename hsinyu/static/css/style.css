@@ -29,7 +29,7 @@ body,
     display: inline-block;
     font-size: 20px;
 }
-#button2{
+.button2{
     background-color: #E66D1D;
     border-radius: 12px;
     color: white;
