@@ -302,7 +302,7 @@
       // });
       $.ajax({
         method: "POST",
-        url: "http://127.0.0.1:5000/api/states"
+        url: "https://ucb-projectone.herokuapp.com/api/states"
       })
         .done(function (msg) {
           var datafilter = JSON.parse(msg);
@@ -315,6 +315,7 @@
     }
 
     function get_county() {
+      /*
       $("#county").empty();
       d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
         var county_manu = [];
@@ -329,6 +330,32 @@
           $("#county").append("<option>" + c + "</option>");
         });
       });
+      */
+      $.ajax({
+        method: "POST",
+        url: "https://ucb-projectone.herokuapp.com/api/counties",
+        data: { state: selectedstate }
+      })
+        .done(function (msg) {
+          var datafilter = JSON.parse(msg);
+          var mappan = false;
+          datafilter.forEach((dataRow) => {
+            let row = tbody.append("tr");
+            console.log("dataRow", dataRow);
+            L.marker([dataRow.Latitude, dataRow.Longitude], { icon: myfire }).addTo(map);
+            if (mappan == false) {
+              console.log("setting mapview");
+              map.setView([dataRow.Latitude, dataRow.Longitude], 10);
+              mappan = true;
+            }
+            keys.forEach(function (key) {
+              let cell = row.append("td");
+              cell.text(dataRow[headers[key]]);
+            });
+
+          });
+        });
+
     }
 
     function filter_county(county) {
@@ -348,7 +375,7 @@
 
       $.ajax({
         method: "POST",
-        url: "http://127.0.0.1:5000/api/county",
+        url: "https://ucb-projectone.herokuapp.com/county",
         data: { state: selectedstate, county: county }
       })
         .done(function (msg) {
@@ -413,7 +440,7 @@
 
       $.ajax({
         method: "POST",
-        url: "http://127.0.0.1:5000/api/state",
+        url: "https://ucb-projectone.herokuapp.com/api/state",
         data: { state: state }
       })
         .done(function (msg) {

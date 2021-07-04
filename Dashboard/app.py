@@ -46,6 +46,17 @@ def api_state():
    return json.dumps(sdata)
    # return render_template("index.html")
 
+@app.route("/api/counties", methods=['POST'])
+def api_counties():
+   print('apicountiescall')
+   selectedstate = request.form['state']
+   sdata=[]
+   for row in session.query(wildfire).filter_by(State_name = selectedstate):
+      if row['county'] not in sdata:
+        sdata.append(row['county'])       
+   return json.dumps(sdata)
+   # return render_template("index.html")
+
 @app.route("/api/county", methods=['POST'])
 def api_county():
    print('apicountycall')
