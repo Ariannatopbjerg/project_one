@@ -43,6 +43,7 @@ Model Progression: [Pt.1](https://github.com/Ariannatopbjerg/US_Wildfire/blob/ma
 ### Confusion Matrix
 The confusion matrix shows that during the splitting of the test and train samples for our model, fire size class d and e did not split properly, giving 0s in the confusion matrix. Analyzing the data; shown in pie chart, the classes are imbalanced. For this, we attempted to do a test/train split for each of the six fire size classes, concatenate all the classes together, then overfitted and underfitted the minority classes so the majority and minority classes are balanced in the training set. The outcome of testing to see if overfitting or underfitting would fix the imbalance of the classes were inconclusive. The results for both scenarios were similar to the initial confusion matrix. The only difference were the accuracy scores. Both gave lower accuracy scores compared to the initial model. 
 
+![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/AriannaSeg4/images/confussion_matrix.png) ![]()
 ### Future statistical analysis
 
 ## Database 
