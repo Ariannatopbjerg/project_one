@@ -47,17 +47,25 @@
     <p style="color: black; text-align: left; font-size: 28px;" id="p1">
       <strong>Living in California while fire was rampant, it sparked our interest to analyze wildfires across the
         United States from 1992-2015. We utilized Random Forest Machine Learning Model to predict the class of the fire
-        size in an effort to educate the public and for resources distribution. <br></br>
+        size in an effort to educate the public and for resources distribution.
+       </strong></b>
+      <br></br>
+       <strong>The goal of this analysis is to predict fire size class based on publicly available data. We elected Kaggle and
+        started with the 1.88 million dataset and ultimately preferred the subset that includes weather data. After
+        extract, transform and load, we ultimately performed machine learning with over seven thousand data points. We
+        elected to randomly split, train, and test utilizing Random Forrest Classifier. The best accuracy score we could
+        obtain was 70%, due to our limited expertise in fire science, limited time, and our early career in data science.
+        If we continued to work on this project we would explore more features that contribute to wildfires and recent
+        fire data.
+        <br></br>
         Here you will find an interactive table and visualizations pertaining to wildfires across the United
-        States.</strong></b>
-      <br></br>
-      <br></br>
+        States.
+      </strong>
     </p>
-    <br></br>
-    <br></br>
     <br></br>
   </div>
 
+     
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
@@ -222,7 +230,7 @@
         <p style="color: red; text-align: center; font-size: 22px;" id="p1">
           <!-- <strong>can we fit text here???</strong></b> -->
   <!-- <div class="col-md-2; text-align: right; font-size: 24px;" id="p1"> -->
-  <div style="color:black; text-align: left; font-size: 28px; id=" p1">
+  <!-- <div style="color:black; text-align: left; font-size: 28px; id=" p1">
     <h3>Machine Learning Model Accuracy</h3>
     <h4>The goal of this analysis is to predict fire size class based on publicly available data. We elected Kaggle and
       started with the 1.88 million dataset and ultimately preferred the subset that includes weather data. After
@@ -233,7 +241,7 @@
       fire data.
     </h4>
     <br></br>
-  </div> -->
+  </div> --> -->
 
   </section>
 
@@ -279,19 +287,31 @@
 
     var selectedstate = null;
     function get_states() {
-      d3.csv("http://127.0.0.1:5000/Resources/wildfire_data_final.csv").then(function (data) {
-        var states = [];
-        data.forEach(function (d) {
-          if (states.indexOf(d.State_name) < 0) {
-            states.push(d.State_name);
-          }
+      // d3.csv("http://127.0.0.1:5000/Resources/wildfire_data_final.csv").then(function (data) {
+      //   var states = [];
+      //   data.forEach(function (d) {
+      //     if (states.indexOf(d.State_name) < 0) {
+      //       states.push(d.State_name);
+      //     }
+      //   });
+      //   states.sort();
+      //   states.forEach(function (s) {
+      //     $("#state").append("<option>" + s + "</option>");
+      //   });
+      //   //  console.log("csv states data", states);
+      // });
+      $.ajax({
+        method: "POST",
+        url: "http://127.0.0.1:5000/api/states"
+      })
+        .done(function (msg) {
+          var datafilter = JSON.parse(msg);
+          // console.log(msg);
+          datafilter.sort();
+          datafilter.forEach((state) => {
+            $("#state").append("<option>" + state + "</option>");
+          });
         });
-        states.sort();
-        states.forEach(function (s) {
-          $("#state").append("<option>" + s + "</option>");
-        });
-        //  console.log("csv states data", states);
-      });
     }
 
     function get_county() {
@@ -324,23 +344,54 @@
         let cell = header.append("th");
         cell.text(key);
       });
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      $(".leaflet-marker-icon").remove();
 
-        datafilter = data.filter(holder => {
-          // console.log(holder);
-          return (holder.State_name == selectedstate && holder.County == county);
-        });
+      $.ajax({
+        method: "POST",
+        url: "http://127.0.0.1:5000/api/county",
+        data: { state: selectedstate, county: county }
+      })
+        .done(function (msg) {
+          var datafilter = JSON.parse(msg);
+          var mappan = false;
+          datafilter.forEach((dataRow) => {
+            let row = tbody.append("tr");
+            console.log("dataRow", dataRow);
+            L.marker([dataRow.Latitude, dataRow.Longitude], { icon: myfire }).addTo(map);
+            if (mappan == false) {
+              console.log("setting mapview");
+              map.setView([dataRow.Latitude, dataRow.Longitude], 10);
+              mappan = true;
+            }
+            keys.forEach(function (key) {
+              let cell = row.append("td");
+              cell.text(dataRow[headers[key]]);
+            });
 
-        // console.log(datafilter);
-        datafilter.forEach((dataRow) => {
-          let row = tbody.append("tr");
-          console.log("dataRow", dataRow);
-          keys.forEach(function (key) {
-            let cell = row.append("td");
-            cell.text(dataRow[headers[key]]);
           });
         });
-      });
+
+      // d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      // datafilter = data.filter(holder => {
+      //     // console.log(holder);
+      //     return (holder.State_name == selectedstate && holder.County == county);
+      //   });
+      //   var mappan = false;
+      //   datafilter.forEach((dataRow) => {
+      //     let row = tbody.append("tr");
+      //     console.log("dataRow", dataRow);
+      //     L.marker([dataRow.Latitude, dataRow.Longitude], { icon: myfire }).addTo(map);
+      //     if (mappan == false) {
+      //       console.log("setting mapview");
+      //       map.setView([dataRow.Latitude, dataRow.Longitude], 10);
+      //       mappan = true;
+      //     }
+      //     keys.forEach(function (key) {
+      //       let cell = row.append("td");
+      //       cell.text(dataRow[headers[key]]);
+      //     });
+      //   });
+      // });
     }
 
     function filter_state(state) {
@@ -372,8 +423,8 @@
             let row = tbody.append("tr");
             console.log("dataRow", dataRow);
 
-            L.marker([dataRow.Latitude, dataRow.Longitude],{icon:myfire}).addTo(map);
-            
+            L.marker([dataRow.Latitude, dataRow.Longitude], { icon: myfire }).addTo(map);
+
             keys.forEach(function (key) {
               let cell = row.append("td");
               cell.text(dataRow[headers[key]]);
