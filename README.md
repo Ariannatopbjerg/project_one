@@ -60,13 +60,8 @@ In the database connection code, you will see the creation of a new dataset for 
 ![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ERD-Wildfire.png)
 
 ## DashBoard
-[index.html draft](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Dashboard/index.html)
+[Wildfire Interactive Visualizations Dashboard](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Dashboard/index.html)
 
-**Images from the machine learning task**
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/various_accuracy_scores.png)
-
-![](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/images/ML_model_70_percent.png)
 
 
 
