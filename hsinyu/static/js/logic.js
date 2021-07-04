@@ -11,15 +11,15 @@ street.addTo(map);
 
 // Icon options
 var myfire = L.icon({
-	iconUrl: 'free-fire-icon-8.jpg',
+	iconUrl: '../static/images/free-fire-icon-8.jpg',
 	iconSize: [20, 20]
 });
 
-// load dataset with special fire markers optional slice rows
-d3.csv("../Resources/wildfireDataFinal.csv").then(function(data) {
-	// data.forEach(function(item){
-		// data.slice(0,200).forEach(function(item){
-		data.forEach(function(item){
-		L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
-	})
-});
+// // load dataset with special fire markers optional slice rows
+// d3.csv("../Resources/wildfireDataFinal.csv").then(function(data) {
+// 	// data.forEach(function(item){
+// 		// data.slice(0,200).forEach(function(item){
+// 		data.forEach(function(item){
+// 		L.marker([item.Latitude, item.Longitude],{icon:myfire}).addTo(map);
+// 	})
+// });

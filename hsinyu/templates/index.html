@@ -22,20 +22,13 @@
 
 <header>
   <nav>
-
-    <div class="row row-large" style=color:red">
-      <h1 style="color: orangered" id="title">Dashboard</h1>
-    </div>
-
     <div id="container">
-      <!-- <a href="index.html">
-        <button type="button" id="button2" class="btn btn-primary float-right">Home</button> -->
       <a href="pages/aboutus.html">
-        <button type="button" id="button2" class="btn btn-primary float-right">About Us</button>
+        <button type="button" id="button2" class="button2 btn btn-primary float-right">About Us</button>
       </a>
       </a>
       <a href="pages/resources.html">
-        <button type="button" id="button3" class="btn btn-primary float-right">Resources</button>
+        <button type="button" id="button3" class="button2 btn btn-primary float-right">Resources</button>
       </a>
     </div>
   </nav>
@@ -51,12 +44,14 @@
     </div>
   </div>
   <div class="col-md-12">
-    <p style="color: black; text-align: center; font-size: 28px;" id="p1">
+    <p style="color: black; text-align: left; font-size: 28px;" id="p1">
       <strong>Living in California while fire was rampant, it sparked our interest to analyze wildfires across the
-        United States
-        from 1992-2015. We utilized Random Forest Machine Learning Model to predict the class of the fire size in an
-        effort to educate the public and for resources distribution. Here you will find an interactive table and
-        visualizations pertaining to wildfires across the United States.</strong></b>
+        United States from 1992-2015. We utilized Random Forest Machine Learning Model to predict the class of the fire
+        size in an effort to educate the public and for resources distribution. <br></br>
+        Here you will find an interactive table and visualizations pertaining to wildfires across the United
+        States.</strong></b>
+      <br></br>
+      <br></br>
     </p>
     <br></br>
     <br></br>
@@ -67,30 +62,10 @@
     <div class="row">
       <div class="col-md-3">
         <form class="bg-light">
-          <p style=color:red>Please make selection to display fire data from 1992-2015 of the state and/or county of interest.
+          <p style=color:orangered>Please make selection to display fire data from 1992-2015 of the state and/or county
+            of interest.
           </p>
           <ul class="list-group bg-dark">
-
-          <!-- Comment out previous selection group  -->
-            <!-- <li class="list-group-item bg-light">
-                <label for="enter_state">Enter State</label><br>
-                <select id="state" onchange="optionChanged(this.value)">
-                  <option disabled selected value> -- select an option -- </option>
-                </select>
-                 -->
-            <!--<input type="text" placeholder="California" id="state" />-->
-            <!-- </li>
-              <li class="list-group-item bg-light">
-                <label for="enter_county">Enter County</label><br>
-                <select id="county" onchange="optionChanged(this.value)">
-                  <option disabled selected value> -- select an option -- </option>
-                </select>
-              </li>
-               -->
-            <!-- <li class="list-group-item bg-light">
-                <label for="enter_year">Enter Year</label><br>
-                <select id="year" onchange="optionChanged(this.value)"></select>
-              </li> -->
 
             <li class="list-group-item bg-light">
               <label for="state">Enter State</label><br>
@@ -117,16 +92,6 @@
         <table class="table table-striped">
           <!-- <table class="table table-bordered"> -->
           <thead id="fire_table_header">
-            <!--
-              <tr>
-                <th>State</th>
-                <th>County</th>
-                <th>Year</th>
-                <th>Month</th>
-                <th>Acreage Burned</th>
-                <th>Fire Cause</th>
-              </tr>
-            -->
           </thead>
           <tbody id="fire_table"></tbody>
         </table>
@@ -190,7 +155,8 @@
         </script>
 
         <div class="col-md-12">
-          <p style="color: black; text-align: center; font-size: 22px;" id="p1">
+          <br></br>
+          <p style="color: black; text-align: center; font-size: 28px;" id="p1">
             <strong>Select year to view fires for that year. </strong></b>
           </p>
         </div>
@@ -249,33 +215,29 @@
           vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
 
-
-        <!-- <div class="col-md-12">
-          <p style="color: red; text-align: center; font-size: 22px;" id="p1">
-            <!-- <strong>can we fit text here???</strong></b> -->
-        <!-- <div class="col-md-12; text-align: right; font-size: 24px;" id="p1">
-            <h3>Machine Learning Model Accuracy</h3>
-            <p>Using Random Forest Classifier, the model predicts<br>fire size class with an accuracy score of 70%</p>
-          </div>
-          </p>
-        </div> --> -->
-
       </div>
 
   </div>
-    <!-- <div class="col-md-12">
+  <!-- <div class="col-md-12">
         <p style="color: red; text-align: center; font-size: 22px;" id="p1">
           <!-- <strong>can we fit text here???</strong></b> -->
-      <!-- <div class="col-md-2; text-align: right; font-size: 24px;" id="p1"> -->
-  <div style="color: black; text-align: center; font-size: 24px; id="p1">
+  <!-- <div class="col-md-2; text-align: right; font-size: 24px;" id="p1"> -->
+  <div style="color:black; text-align: left; font-size: 28px; id=" p1">
     <h3>Machine Learning Model Accuracy</h3>
-    <h4>Using Random Forest Classifier, the model predicts<br>fire size class with an accuracy score of 70%</h4>
+    <h4>The goal of this analysis is to predict fire size class based on publicly available data. We elected Kaggle and
+      started with the 1.88 million dataset and ultimately preferred the subset that includes weather data. After
+      extract, transform and load, we ultimately performed machine learning with over seven thousand data points. We
+      elected to randomly split, train, and test utilizing Random Forrest Classifier. The best accuracy score we could
+      obtain was 70%, due to our limited expertise in fire science, limited time, and our early career in data science.
+      If we continued to work on this project we would explore more features that contribute to wildfires and recent
+      fire data.
+    </h4>
+    <br></br>
   </div> -->
 
   </section>
 
-
-<!-- remove last pie chart -->
+  <!-- remove last pie chart -->
   <!-- <div class='tableauPlaceholder' id='viz1625112874949' style='position: relative'><noscript><a href='#'><img
           alt='Dashboard 2 '
           src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;wi&#47;wildfire_test&#47;Dashboard2&#47;1_rss.png'
@@ -297,8 +259,6 @@
     </object></div>
   <script
     type='text/javascript'> var divElement = document.getElementById('viz1625112874949'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1004px'; vizElement.style.height = '877px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1004px'; vizElement.style.height = '877px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-
-
   </div> -->
 
   <!--Leaflet JavaScript file-->
@@ -314,12 +274,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<!-- Start selection display logic -->
- <script>
+  <!-- Start selection display logic -->
+  <script>
 
     var selectedstate = null;
     function get_states() {
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
+      d3.csv("http://127.0.0.1:5000/Resources/wildfire_data_final.csv").then(function (data) {
         var states = [];
         data.forEach(function (d) {
           if (states.indexOf(d.State_name) < 0) {
@@ -344,6 +304,7 @@
           }
         });
         county_manu.sort();
+        $("#county").append("<option>--select an option--</option>");
         county_manu.forEach(function (c) {
           $("#county").append("<option>" + c + "</option>");
         });
@@ -382,7 +343,6 @@
       });
     }
 
-
     function filter_state(state) {
       selectedstate = state;
       get_county();
@@ -397,17 +357,42 @@
         let cell = header.append("th");
         cell.text(key);
       });
-      d3.csv("Resources/wildfire_data_final.csv").then(function (data) {
-        datafilter = data.filter(holder => holder.State_name == state);
-        datafilter.forEach((dataRow) => {
-          let row = tbody.append("tr");
-          console.log("dataRow", dataRow);
-          keys.forEach(function (key) {
-            let cell = row.append("td");
-            cell.text(dataRow[headers[key]]);
+      // add marker icons for filter
+      $(".leaflet-marker-icon").remove();
+
+      $.ajax({
+        method: "POST",
+        url: "http://127.0.0.1:5000/api/state",
+        data: { state: state }
+      })
+        .done(function (msg) {
+          var datafilter = JSON.parse(msg);
+          // console.log(msg);
+          datafilter.forEach((dataRow) => {
+            let row = tbody.append("tr");
+            console.log("dataRow", dataRow);
+
+            L.marker([dataRow.Latitude, dataRow.Longitude],{icon:myfire}).addTo(map);
+            
+            keys.forEach(function (key) {
+              let cell = row.append("td");
+              cell.text(dataRow[headers[key]]);
+            });
           });
         });
-      });
+
+
+      // d3.csv("Resources/wildfireDataFinal.csv").then(function (data) {
+      //   datafilter = data.filter(holder => holder.State_name == state);
+      //   datafilter.forEach((dataRow) => {
+      //     let row = tbody.append("tr");
+      //     console.log("dataRow", dataRow);
+      //     keys.forEach(function (key) {
+      //       let cell = row.append("td");
+      //       cell.text(dataRow[headers[key]]);
+      //     });
+      //   });
+      // });
     }
 
     $(document).ready(function () {
