@@ -13,15 +13,12 @@ body,
     text-align: center;
     height: 300px;
 }
-
 #title{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 #p1{
     font-family: Helvetica;
-}
-
+/* }
 #button1{
     background-color: #E66D1D;
     border-radius: 12px;
@@ -32,8 +29,7 @@ body,
     display: inline-block;
     font-size: 20px;
 }
-
-.button2{
+#button2{
     background-color: #E66D1D;
     border-radius: 12px;
     color: white;
@@ -43,7 +39,39 @@ body,
     display: inline-block;
     font-size: 20px;
 }
+#button3{
+    background-color: #E66D1D;
+    border-radius: 12px;
+    color: white;
+    padding: 9px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+} */
 
+
+}
+#button1{
+    background-color: #E66D1D;
+    border-radius: 12px;
+    color: white;
+    padding: 9px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+#button2{
+    background-color: #E66D1D;
+    border-radius: 12px;
+    color: white;
+    padding: 9px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
 #button3{
     background-color: #E66D1D;
     border-radius: 12px;
