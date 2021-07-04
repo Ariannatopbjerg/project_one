@@ -9,6 +9,8 @@ engine = create_engine(os.environ["DATABASE_AWS"])
 Base = automap_base()
 Base.prepare(engine, reflect=True)
 
+# Use dataset
+
 wildfire = Base.classes.wildfireDataFinal
 session=Session(engine)
 for row in session.query(wildfire).all():

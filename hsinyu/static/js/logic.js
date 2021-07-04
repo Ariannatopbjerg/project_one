@@ -15,9 +15,8 @@ var myfire = L.icon({
 	iconSize: [20, 20]
 });
 
-// load dataset with special fire markers, slice rows
+// load dataset with special fire markers optional slice rows
 d3.csv("../Resources/wildfireDataFinal.csv").then(function(data) {
-	// console.log(data)	
 	// data.forEach(function(item){
 		// data.slice(0,200).forEach(function(item){
 		data.forEach(function(item){
