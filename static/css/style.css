@@ -1,0 +1,58 @@
+.jumbotron {
+    background-image: url("../images/water_fire.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    height: 300px;
+}
+#title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#p1{
+    font-family: Helvetica;
+}
+#button1{
+    background-color: #E66D1D;
+    border-radius: 12px;
+    color: white;
+    padding: 9px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#button2{
+    background-color: #E66D1D;
+    border-radius: 12px;
+    color: white;
+    padding: 9px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#button3{
+    background-color: #E66D1D;
+    border-radius: 12px;
+    color: white;
+    padding: 9px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#container{
+    text-align: right;
+}
+
+
+option{
+    font-size: 32px;
+}
+  
+form{
+    font-size: 35px;
+  }
+  
+table tbody tr {
+    font-size: 35px;
+}
