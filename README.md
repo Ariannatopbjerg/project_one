@@ -27,7 +27,7 @@ A copy of our presentation will be available on [Google Slides](https://docs.goo
 
 ## Machine Learning Model 
 - Utilized Panda's profiling to visualize metadata of the original dataset. Removed nulls, checked for duplicates, and removed noncontributing data.
-- Removed features after [initial machine learning model]() due to a negative accuracy score of -117% using Random Forest Regressor model. 
+- Removed features after [initial machine learning model](https://github.com/Ariannatopbjerg/US_Wildfire/blob/main/Notebooks/ML_RandomForestRegressor.ipynb) due to a negative accuracy score of -117% using Random Forest Regressor model. 
 - Removed additional features to improve accuracy score.
 - Elected random sampling for splitting, training, and testing dataset.
 - Confirmed to use Random Forest Machine Learning Model in lieu of using Decision Trees due to better performance. Limitations for Random Forest are greater time required for training as it combines a lot of decision trees to determine the class as well as requiring much computational power and resources as it builds numerous trees to combine their outputs. 
