@@ -1,4 +1,4 @@
-
+Edits to make sure I have enough commits. 
 # Segment 2
 ## Presentation
 We selected the topic of Wildfires across the United States. The members of our team live or have lived in the Bay Area of California. A few years ago, when the fires were running rampant, we all experienced ashes raining from the sky and not being able to see the sun for days. This topic touches us personally and piques our interest. To know more about this topic and future potential wildfires, we want to see if it is possible to predict future fires based on past fire data. Our project consists of analyzing fire data to determine at what accuracy if any, can we predict the class of the fire size. We will clean the input dataset to  demonstrate that in deed we can predict up to 91% accuracy. At this phase, we have eliminated the dataset to **enter data rows**. This dataset is a sub-sample from 1.88 Million US Fires combined with historical weather and vegetation data from the website Kaggle.
