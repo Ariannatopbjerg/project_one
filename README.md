@@ -20,6 +20,7 @@ Utilized Panda's profiling to visualize metadata of the original dataset. [Remov
 - HTML
 - Javascript
 - SQL
+- Tableau
 - Machine Learning Random Forest Classifier
 - Google Slides 
 
