@@ -12,6 +12,7 @@ Utilized Panda's profiling to visualize metadata of the original dataset. [Remov
 
 - Jupyter Notebook 
 - PostgresSQL 
+- AWS
 - Flask app 
 - Leaflet
 - Heroku
